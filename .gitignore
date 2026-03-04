@@ -1,0 +1,16 @@
+# Environments
+venv/
+env/
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Database & Data (Qdrant ve Ham PDF'ler gitmemeli)
+qdrant_data/
+data/raw/
+data/processed/
+
+# OS Files
+.DS_Store
