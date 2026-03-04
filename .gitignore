@@ -1,16 +1,34 @@
-# Environments
+# -----------------------------
+# VERİTABANI (Qdrant)
+# -----------------------------
+# Klasörün kendisini GitHub'a gönder, ama içindeki DB dosyalarını yoksay
+qdrant_data/*
+!qdrant_data/.gitkeep
+
+# -----------------------------
+# VERİ (DataOps)
+# -----------------------------
+# Klasörleri GitHub'a gönder, ama içindeki PDF, JSON ve Vektörleri yoksay
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+data/embeddings/*
+!data/embeddings/.gitkeep
+
+# -----------------------------
+# PYTHON VE ORTAM DEĞİŞKENLERİ
+# -----------------------------
 venv/
 env/
 .env
-
-# Python
 __pycache__/
 *.pyc
 
-# Database & Data (Qdrant ve Ham PDF'ler gitmemeli)
-qdrant_data/
-data/raw/
-data/processed/
-
-# OS Files
+# -----------------------------
+# İŞLETİM SİSTEMİ DOSYALARI
+# -----------------------------
 .DS_Store
+Thumbs.db
