@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  emparag:
+    build: .
+    container_name: emparag_app
+    volumes:
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
+      - ./configs:/app/configs
+    environment:
+      - APP_ENV=local
+      - HF_TOKEN=${HF_TOKEN}
+    command: python -m src.pipelines.run_rag_pipeline
