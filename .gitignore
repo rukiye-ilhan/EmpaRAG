@@ -1,34 +1,69 @@
-# -----------------------------
-# VERİTABANI (Qdrant)
-# -----------------------------
-# Klasörün kendisini GitHub'a gönder, ama içindeki DB dosyalarını yoksay
-qdrant_data/*
-!qdrant_data/.gitkeep
-
-# -----------------------------
-# VERİ (DataOps)
-# -----------------------------
-# Klasörleri GitHub'a gönder, ama içindeki PDF, JSON ve Vektörleri yoksay
-data/raw/*
-!data/raw/.gitkeep
-
-data/processed/*
-!data/processed/.gitkeep
-
-data/embeddings/*
-!data/embeddings/.gitkeep
-
-# -----------------------------
-# PYTHON VE ORTAM DEĞİŞKENLERİ
-# -----------------------------
-venv/
-env/
-.env
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+*.so
 
-# -----------------------------
-# İŞLETİM SİSTEMİ DOSYALARI
-# -----------------------------
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+ilhanrag/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# Environment files
+.env
+
+# Local model / HF cache
+.cache/
+huggingface/
+hf_cache/
+
+# Data artifacts (keep structure, not heavy generated files)
+data/vector_db/
+artifacts/pipeline_runs/
+artifacts/evaluations/
+
+# Processed outputs - optional
+# Eğer processed çıktıları GitHub'a koymak istemiyorsan açık bırak
+data/processed/*.parquet
+data/processed/*.jsonl
+
+# Large files
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Test / temp
+tmp/
+temp/
+
+data/raw/
+data/reports/
+*.csv
+a.py
+data_prep.py
+download_financebench.py
